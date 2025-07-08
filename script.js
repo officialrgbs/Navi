@@ -125,7 +125,7 @@ const getData = async () => {
         contentDiv.className = 'flex justify-between items-center flex-wrap gap-2';
 
         const infoSpan = document.createElement('span');
-        infoSpan.innerHTML = `${titleDisplay} - ${processDeadline(deadline)} - ${processSubject(Subject)}`;
+        infoSpan.innerHTML = `${titleDisplay} - ${processDeadline(deadline)} <br> ${processSubject(Subject)}`;
         
         const deleteButton = document.createElement('button');
         deleteButton.className = 'bg-red-500 text-white px-2 py-1 rounded-md ml-2';
