@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h1 class="text-2xl font-bold text-center">Hello, user!</h1>
+    <div id="output"></div>
+    
+    <div class="flex justify-center">
+        <button id="insert" class="px-4 py-2 bg-blue-600 text-white rounded">Insert Assignment</button>
+    </div>
+
+    <div id="modalOverlay" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white p-6 rounded-xl w-full max-w-md shadow-lg relative">
+            <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-black">&times;</button>
+            <h2 class="text-xl font-semibold mb-4">Enter Details</h2>
+
+            <form id="modalForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium">Title</label>
+                    <input type="text" name="assignment_title" required class="mt-1 w-full p-2 border rounded">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium">Date</label>
+                    <input type="date" name="deadline" class="mt-1 w-full p-2 border rounded">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium">Subject</label>
+                    <select name="Subject" required class="mt-1 w-full p-2 border rounded">
+                        <option value="Values">Values</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Filipino">Filipino</option>
+                        <option value="Research 2">Research 2</option>
+                        <option value="Electronics and Robotics">Electronics and Robotics</option>
+                        <option value="Science">Science</option>
+                        <option value="English">English</option>
+                        <option value="Analytic Geometry">Analytic Geometry</option>
+                        <option value="Music">Music</option>
+                        <option value="Arts">Arts</option>
+                        <option value="Physical Education">Physical Education</option>
+                        <option value="Health">Health</option>
+                        <option value="Araling Panlipunan">Araling Panlipunan</option>
+                    </select>
+                </div>
+
+                <div class="text-right">
+                    <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded">Add Assignment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
